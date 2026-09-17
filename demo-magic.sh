@@ -191,7 +191,7 @@ function run_cmd() {
 
   trap handle_cancel SIGINT
   stty -echoctl
-  eval $@
+  eval "$@"
   stty echoctl
   trap - SIGINT
 }
